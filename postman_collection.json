@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "b6c20b72-5faa-486c-9a4e-56b0e9c444a0",
+		"name": "VivaCityTech Exercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33813465"
+	},
+	"item": [
+		{
+			"name": "get all applicants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5100/awesome/all-applicants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"awesome",
+						"all-applicants"
+					]
+				},
+				"description": "returns all users in users table in userinfo database"
+			},
+			"response": []
+		},
+		{
+			"name": "delete an applicant by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5100/awesome/applicant/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"awesome",
+						"applicant",
+						"3"
+					]
+				},
+				"description": "deletes an user in users table using id in userinfo database"
+			},
+			"response": []
+		},
+		{
+			"name": "create new applicant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test12\",\n    \"email\": \"test12@gmail.com\",\n    \"age\": \"23\",\n    \"linkedinprofile\": \"https://www.linkedin.com/in/test12/\",\n    \"githubprofile\": \"https://github.com/test12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5100/awesome/applicant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"awesome",
+						"applicant"
+					]
+				},
+				"description": "creates a new user in users table in userinfo database"
+			},
+			"response": []
+		},
+		{
+			"name": "get applicant by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5100/awesome/applicant/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"awesome",
+						"applicant",
+						"2"
+					]
+				},
+				"description": "returns a particular user in users table using id in userinfo database"
+			},
+			"response": []
+		},
+		{
+			"name": "update applicant by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test123\",\n    \"email\": \"test123@gmail.com\",\n    \"age\": \"23\",\n    \"linkedinprofile\": \"https://www.linkedin.com/in/test123/\",\n    \"githubprofile\": \"https://github.com/test123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5100/awesome/applicant/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"awesome",
+						"applicant",
+						"2"
+					]
+				},
+				"description": "updates an user in users table using id in userinfo database"
+			},
+			"response": []
+		},
+		{
+			"name": "get My Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5100/awesome/applicant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"awesome",
+						"applicant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

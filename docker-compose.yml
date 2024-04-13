@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  postgreservice:
+    image: postgres:latest
+    container_name: postgresserver
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgresdb-volume:/var/lib/postgresql/data
+      - ./dbFiles:/docker-entrypoint-initdb.d
+    environment:
+      - POSTGRES_PASSWORD=scrpwd
+      - POSTGRES_USER=root
+      - POSTGRES_DB= postgres
+
+
+  expressserver:
+    build: .
+    container_name: expressserver
+    ports:
+      - "5100:5100"
+    volumes:
+      - .:/app/
+    depends_on:
+      - postgreservice
+volumes:
+  postgresdb-volume:
