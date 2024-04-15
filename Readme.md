@@ -8,4 +8,4 @@
 
 #### To run tests on all API end points  
 ---
-``` npm test```
+``` npm run test```

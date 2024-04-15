@@ -7,8 +7,8 @@ CREATE TABLE IF NOT EXISTS applicants (
     username VARCHAR(50) NOT NULL UNIQUE ,
     email VARCHAR(100) NOT NULL UNIQUE,
     age NUMERIC(3),
-    linkedINProfile VARCHAR(150) UNIQUE,
-    GithubProfile VARCHAR(150) UNIQUE
+    linkedINProfile VARCHAR(150) ,
+    GithubProfile VARCHAR(150) 
 );
 
 
